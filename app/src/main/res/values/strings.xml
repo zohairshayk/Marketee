@@ -5,4 +5,6 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="settings_fragment">Settings Fragment</string>
     <string name="account_fragment">Account Fragment</string>
+    <string name="open_drawer">Open Drawer Navigation</string>
+    <string name="close_drawer">Close Drawer Navigation</string>
 </resources>
