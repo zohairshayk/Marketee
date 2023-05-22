@@ -1,7 +1,9 @@
 package com.zohair.app.navigation;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,5 +40,17 @@ public class SplashScreen extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        closeApp();
+    }
+
+    private void closeApp() {
+        Dialog dialog = new Dialog(getBaseContext());
+        dialog.setTitle("Alert");
+        dialog.setContentView(R.layout.custom_alert_dialog);
+
+    }
 
 }

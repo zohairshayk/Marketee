@@ -7,7 +7,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -41,16 +43,29 @@ public class DrawerNavigation extends AppCompatActivity implements NavigationVie
 
         navigationView.setNavigationItemSelectedListener(this);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open_drawer,R.string.close_drawer);
-        drawerLayout.addDrawerListener(toogle);
-        toogle.syncState();
+                drawerLayout.openDrawer(Gravity.LEFT);
 
-        if(savedInstanceState==null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment());
-            navigationView.setCheckedItem(R.id.home);
-        }
+                ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(DrawerNavigation.this,drawerLayout,R.string.open_drawer,R.string.close_drawer);
+                drawerLayout.addDrawerListener(toogle);
+                toogle.syncState();
+                if(savedInstanceState==null){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment());
+                    navigationView.setCheckedItem(R.id.home);
+                }
+            }
+        });
+
+
+
+
+
     }
+
+
 
     HomeFragment homeFragment = new HomeFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
@@ -63,19 +78,23 @@ public class DrawerNavigation extends AppCompatActivity implements NavigationVie
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.frame_layout,homeFragment).commit();
+                drawerLayout.closeDrawer(Gravity.LEFT);
                 return true;
             case R.id.setting:
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.frame_layout,settingsFragment).commit();
+                drawerLayout.closeDrawer(Gravity.LEFT);
                 return true;
             case R.id.person:
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.frame_layout,accountFragment).commit();
+                drawerLayout.closeDrawer(Gravity.LEFT);
                 return true;
             case R.id.logout:
                 Toast.makeText(this,"Log Out",Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(Gravity.LEFT);
                 break;
 
         }

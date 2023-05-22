@@ -73,6 +73,6 @@ public class AccountFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Toast.makeText(getContext(),"Account Fragment",Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getContext(),"Account Fragment",Toast.LENGTH_LONG).show();
     }
 }

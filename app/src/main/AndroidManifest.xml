@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DrawerNavigation"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="true">
 
         </activity>
