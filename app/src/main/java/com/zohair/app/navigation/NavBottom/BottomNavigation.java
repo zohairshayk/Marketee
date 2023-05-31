@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zohair.app.navigation.NavBottom.fragments.AccountFragment;
-import com.zohair.app.navigation.NavBottom.fragments.HomeFragment;
+import com.zohair.app.navigation.NavBottom.fragments.home.HomeFragment;
 import com.zohair.app.navigation.NavBottom.fragments.SettingsFragment;
 import com.zohair.app.navigation.R;
 
