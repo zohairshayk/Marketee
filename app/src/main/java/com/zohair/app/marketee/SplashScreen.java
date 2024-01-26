@@ -1,26 +1,42 @@
-package com.zohair.app.navigation;
+package com.zohair.app.marketee;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Bundle;
+
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zohair.app.navigation.NavBottom.BottomNavigation;
+import com.zohair.app.marketee.NavBottom.BottomNavigation;
 
 public class SplashScreen extends AppCompatActivity {
 
+    Animation slide_in_right;
+    TextView txt;
+
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        txt = findViewById(R.id.textHeading);
+        slide_in_right = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_right);
+
+        MyAnimationListener listener = new MyAnimationListener();
+        listener.setText(txt);
+
+        txt.startAnimation(slide_in_right);
+        slide_in_right.setAnimationListener(listener);
+
 
         Button drawer_nav,bottom_nav;
 
@@ -107,6 +123,25 @@ public class SplashScreen extends AppCompatActivity {
 
     }
 
-
+    public class MyAnimationListener implements Animation.AnimationListener {
+        TextView text;
+        ImageView img;
+        public void setImage(Image view) {
+            this.img = img;
+        }
+        public void setText(TextView view) {
+            this.text = text;
+        }
+        public void onAnimationEnd(Animation animation) {
+            // Do whatever you want
+            Intent intent= new Intent(SplashScreen.this, BottomNavigation.class);
+            startActivity(intent);
+        }
+        public void onAnimationRepeat(Animation animation) {
+        }
+        public void onAnimationStart(Animation animation) {
+        }
+    }
 
 }
+

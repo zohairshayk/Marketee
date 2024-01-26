@@ -1,4 +1,4 @@
-package com.zohair.app.navigation.NavBottom.fragments.home;
+package com.zohair.app.marketee.NavBottom.fragments.home;
 
 import android.os.Bundle;
 
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zohair.app.navigation.R;
+import com.zohair.app.marketee.R;
 
 import java.util.ArrayList;
 

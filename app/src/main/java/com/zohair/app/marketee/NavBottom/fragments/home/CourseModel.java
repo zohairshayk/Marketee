@@ -1,4 +1,4 @@
-package com.zohair.app.navigation.NavBottom.fragments.home;
+package com.zohair.app.marketee.NavBottom.fragments.home;
 
 
 public class CourseModel {

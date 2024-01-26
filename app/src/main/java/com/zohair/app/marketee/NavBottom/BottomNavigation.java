@@ -1,4 +1,4 @@
-package com.zohair.app.navigation.NavBottom;
+package com.zohair.app.marketee.NavBottom;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.zohair.app.navigation.NavBottom.fragments.AccountFragment;
-import com.zohair.app.navigation.NavBottom.fragments.home.HomeFragment;
-import com.zohair.app.navigation.NavBottom.fragments.SettingsFragment;
-import com.zohair.app.navigation.R;
+import com.zohair.app.marketee.NavBottom.fragments.AccountFragment;
+import com.zohair.app.marketee.NavBottom.fragments.home.HomeFragment;
+import com.zohair.app.marketee.NavBottom.fragments.SettingsFragment;
+import com.zohair.app.marketee.R;
 
 import org.jetbrains.annotations.NotNull;
 

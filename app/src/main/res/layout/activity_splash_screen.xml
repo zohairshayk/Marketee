@@ -6,7 +6,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+
     tools:context=".SplashScreen">
+
+    <TextView
+        android:id="@+id/textHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marketee"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+
+        />
 
 
     <Button
@@ -14,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Drawer Navigation"
+        android:visibility="gone"
         android:layout_margin="20dp"/>
 
     <Button
@@ -21,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/drawerLayout"
         android:text="Bottom Navigation"
+        android:visibility="gone"
         android:layout_height="60dp"
         android:layout_margin="20dp"/>
 

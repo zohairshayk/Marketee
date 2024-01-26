@@ -1,4 +1,4 @@
-package com.zohair.app.navigation;
+package com.zohair.app.marketee;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,9 +16,9 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
-import com.zohair.app.navigation.NavBottom.fragments.AccountFragment;
-import com.zohair.app.navigation.NavBottom.fragments.home.HomeFragment;
-import com.zohair.app.navigation.NavBottom.fragments.SettingsFragment;
+import com.zohair.app.marketee.NavBottom.fragments.AccountFragment;
+import com.zohair.app.marketee.NavBottom.fragments.home.HomeFragment;
+import com.zohair.app.marketee.NavBottom.fragments.SettingsFragment;
 
 import org.jetbrains.annotations.NotNull;
 
